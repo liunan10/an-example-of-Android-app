@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HaroldSpinActivity"
+    android:orientation="vertical"
+    android:background="@android:color/black" >
+
+    <edu.msu.liunan.examliunan.HaroldSpinView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/haroldSpinView"
+        android:contentDescription="@string/image_description"
+        android:layout_weight="5"
+        android:adjustViewBounds="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="center">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_spin"
+            android:id="@+id/buttonSpin"
+            android:layout_gravity="center"
+            android:onClick="onStartSpin"
+            android:layout_above="@+id/textSpin"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/spin_result"
+            android:id="@+id/textSpin"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_newGame"
+            android:id="@+id/buttonNewGame"
+            android:layout_gravity="center"
+            android:onClick="onStartNewGame"
+            android:layout_below="@+id/textSpin"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
